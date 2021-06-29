@@ -2,8 +2,10 @@
 <html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-
-    <head th:replace="fragments/config :: configFragment"></head>
+    <div id="wrapper" class="wrap">
+        <div class="skip-navi"><a href="#gnb">주요 메뉴 바로가기</a><a href="#contents">본문 컨텐츠 바로가기</a></div>
+        <head th:replace="fragments/config :: configFragment"></head>
+    </div>
 
     <header th:replace="fragments/header :: hederFragment"></header>
 

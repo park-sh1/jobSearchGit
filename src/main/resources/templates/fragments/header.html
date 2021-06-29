@@ -1,7 +1,195 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <header th:fragment="hederFragment">
-    <div style="border:1px solid green">
-        header.html 입니다.
+    <div class="header-wrap">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="/main"><i class="img-logo"></i><span class="blind">참 괜찮은 중소기업</span></a>
+            </h1>
+            <div class="link_wrap">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" onclick="dev.action.loginWithConitue()">로그인</a>
+                    </li>
+                    <li>
+                        <a href="/my_action_breakdown/recent_inquiry_company">나의 활동 내역</a>
+                    </li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <!--<li><a href="/platform_introduction">플랫폼 소개</a></li>-->
+                    <li class="not-line"><a href="/biz/login"><i class="ico-biz-home"></i> 기업회원 홈</a></li>
+                </ul>
+            </div><!-- ## Gnb영역 -->
+            <nav id="gnb" class="gnb-wrap">
+                <ul class="gnb">
+                    <li>
+                        <!--// 활성화시 li addClass active -->
+                        <a href="/map/smart_employment">
+                            <span>
+                                지도에서 찾기
+
+                            </span>
+                        </a>
+                        <div class="lnb-inner">
+                            <div class="lnb-list">
+                                <ul class="lnb-dep02">
+                                    <li class="lnb-tit">
+                                        <a href="/map/smart_employment" target="_self">
+                                            일자리지도 탐색
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <!--// 활성화시 li addClass active -->
+                        <a href="/search">
+                            <span>조건으로 찾기</span>
+                        </a>
+                        <div class="lnb-inner">
+                            <div class="lnb-list">
+                                <ul class="lnb-dep02">
+                                    <li class="lnb-tit">
+                                        <a href="/search" target="_self">상세조건 검색</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <!--// 활성화시 li addClass active -->
+                        <a href="/general_outlinel">
+                            <span>중소기업 알기</span>
+                        </a>
+                        <div class="lnb-inner">
+                            <div class="lnb-list">
+                                <ul class="lnb-dep02">
+                                    <li class="lnb-tit">
+                                        <a href="/general_outlinel" target="_self">
+                                            중소기업 첫걸음
+                                        </a>
+                                        <ul class="lnb-dep03">
+                                            <li>
+                                                <a href="/general_outlinel" target="_self">
+                                                    일자리 가이드
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/recognition_betterment" target="_self">
+                                                    중소기업 바로보기
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/hr_manager" target="_self">
+                                                    취업 가이드
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="lnb-tit">
+                                        <a href="/story/company_honor" target="_self">
+                                            우리회사 자랑하기
+                                        </a>
+                                    </li>
+                                    <li class="lnb-tit">
+                                        <a href="/story/company_interview" target="_self">
+                                            우수기업 스토리
+                                        </a>
+                                        <ul class="lnb-dep03">
+                                            <li>
+                                                <a href="/story/company_interview" target="_self">
+                                                    대표와의 만남
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/story/excellence_case" target="_self">
+                                                    우수 성공사례
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <!--// 활성화시 li addClass active -->
+                        <a href="/notice">
+                            <span>
+                                더 알아보기
+                            </span>
+                        </a>
+                        <div class="lnb-inner">
+                            <div class="lnb-list many-dep">
+                                <ul class="lnb-dep02">
+                                    <li class="lnb-tit">
+                                        <a href="/notice" target="_self">
+                                            알림마당
+                                        </a>
+                                        <ul class="lnb-dep03">
+                                            <li>
+                                                <a href="/notice" target="_self">
+                                                    공지사항
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/event" target="_self">
+                                                    이벤트
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="lnb-tit">
+                                        <a href="/education" target="_self">
+                                            교육/멘토링
+                                        </a>
+                                        <ul class="lnb-dep03">
+                                            <li>
+                                                <a href="/education" target="_self">
+                                                    교육
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/mentoring" target="_self">
+                                                    멘토링
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="lnb-tit">
+                                        <a href="/support_benefit" target="_self">
+                                            취업혜택
+                                        </a>
+                                    </li>
+                                    <li class="lnb-tit">
+                                        <a href="/search/type" target="_self">
+                                            선호기업 찾기
+                                            <em class="gnb-mark">Beta</em>
+                                        </a>
+                                        <ul class="lnb-dep03">
+                                            <li>
+                                                <a href="/search/type" target="_self">
+                                                    자가진단 참여
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="lnb-wrap"></div>
+            </nav>
+            <div class="util">
+                <ul>
+                    <li>
+                        <div class="util-div">
+                            <a href="javascript:void(0);" class="btn-util-search" title="검색"><span class="blind">검색</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </header>
 </html>
